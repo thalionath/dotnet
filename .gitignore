@@ -1,0 +1,10 @@
+SerialPorts/SerialPorts/bin
+SerialPorts/SerialPorts/obj
+wp-luna/wp-luna-test/bin
+wp-luna/wp-luna-test/obj
+wp-luna/wp-luna/bin
+wp-luna/wp-luna/obj
+wp-luna/wp-luna-egse/bin
+wp-luna/wp-luna-egse/obj
+*.suo
+wp-luna/*.suo

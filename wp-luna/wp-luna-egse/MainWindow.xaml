@@ -1,0 +1,49 @@
+﻿<Window x:Class="wp.luna.egse.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:core="clr-namespace:System;assembly=mscorlib"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:buni="clr-namespace:wp.luna.buni;assembly=wp-luna"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <ObjectDataProvider x:Key="MarkerEnum" MethodName="GetValues" ObjectType="{x:Type core:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type Type="buni:Marker" />
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+        <ObjectDataProvider x:Key="FlagEnum" MethodName="GetValues" ObjectType="{x:Type core:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type Type="buni:Flag" />
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+        <sys:String x:Key="CrcFormat">{0,0:X4}</sys:String>
+        <Style TargetType="TextBlock" >
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+        <Style TargetType="ComboBox" >
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="Width" Value="100" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <ComboBox Name="Marker" SelectedItem="{Binding Marker, Mode=TwoWay}" ItemsSource="{Binding Source={StaticResource MarkerEnum}}" />
+        <ComboBox Grid.Column="1" Name="Flag" SelectedItem="{Binding Flag, Mode=TwoWay}" ItemsSource="{Binding Source={StaticResource FlagEnum}}" />
+        <TextBlock Grid.Column="2" Text="can have payload" />
+        <TextBlock Grid.Column="3" Text="{Binding CanHavePayload, Mode=OneWay}" />
+        <TextBlock Grid.Column="4" Text="CRC" />
+        <TextBlock Grid.Column="5" Text="{Binding CRC, StringFormat={StaticResource CrcFormat}}" />
+    </Grid>
+</Window>
