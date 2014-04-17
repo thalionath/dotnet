@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3CC08492-EFD7-4E01-96F7-6BF7C564B522}</ProjectGuid>
+    <ProjectGuid>{959F3B3E-9E75-4DF5-B904-DEC507287E8E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>wp_luna_test</RootNamespace>
-    <AssemblyName>wp-luna-test</AssemblyName>
+    <RootNamespace>unibe.space.luna.test</RootNamespace>
+    <AssemblyName>unibe.space.luna.test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,9 +55,9 @@
     <Compile Include="TestCCITT16.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\wp-luna\wp-luna.csproj">
-      <Project>{b43df02d-798e-4786-9c9a-da4d52df6178}</Project>
-      <Name>wp-luna</Name>
+    <ProjectReference Include="..\unibe.space.luna\unibe.space.luna.csproj">
+      <Project>{97e4c773-62d8-4505-af1e-ed3fb1398f95}</Project>
+      <Name>unibe.space.luna</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

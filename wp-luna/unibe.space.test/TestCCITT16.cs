@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using wp.crc;
+using unibe.space.luna.crc;
 
-namespace wp.crc.test
+namespace unibe.space.luna.test
 {
     [TestClass]
     public class TestCCITT16

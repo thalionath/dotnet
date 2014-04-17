@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace wp.luna.egse
+namespace unibe.space.luna.egse
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

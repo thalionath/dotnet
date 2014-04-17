@@ -4,9 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using wp.crc;
+using unibe.space.luna.crc;
 
-namespace wp.luna.buni
+namespace unibe.space.luna.buni
 {
     public enum Marker : byte
     {

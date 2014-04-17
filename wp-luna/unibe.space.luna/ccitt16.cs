@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace wp.crc
+namespace unibe.space.luna.crc
 {
     public class ccitt16
     {

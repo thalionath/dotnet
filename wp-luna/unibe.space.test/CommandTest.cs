@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using wp.luna.buni;
+using unibe.space.luna.buni;
 
-namespace wp.luna.buni.test
+namespace unibe.space.luna.buni.test
 {
     [TestClass]
     public class CommandTest

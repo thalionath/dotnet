@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A90C6774-EF60-4869-8244-76F5D44FAA89}</ProjectGuid>
+    <ProjectGuid>{BC768301-F5A3-42C4-8A4F-C3CD3F84FE21}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>wp.luna.egse</RootNamespace>
-    <AssemblyName>wp-luna-egse</AssemblyName>
+    <RootNamespace>unibe.space.luna.egse</RootNamespace>
+    <AssemblyName>unibe.space.luna.egse</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -105,9 +105,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\wp-luna\wp-luna.csproj">
-      <Project>{b43df02d-798e-4786-9c9a-da4d52df6178}</Project>
-      <Name>wp-luna</Name>
+    <ProjectReference Include="..\unibe.space.luna\unibe.space.luna.csproj">
+      <Project>{97e4c773-62d8-4505-af1e-ed3fb1398f95}</Project>
+      <Name>unibe.space.luna</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
