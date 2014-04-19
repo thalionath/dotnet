@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="buni\Acknowledge.cs" />
     <Compile Include="crc\ccitt16.cs" />
     <Compile Include="buni\Command.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

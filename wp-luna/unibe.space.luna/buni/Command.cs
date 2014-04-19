@@ -23,16 +23,6 @@ namespace unibe.space.luna.buni
         TimeStamp     = 0x05
     };
 
-    [Flags]
-    public enum Status
-    {
-        Error          = 0x01, //!< Bit is set if unknown command was received or command with error.
-        ServiceRequest = 0x02, //!< Bit is set if SI has data packets (at least 1) to transmit to BUNI.
-        Busy           = 0x04, //!< Bit is set if SI is busy can't correctly reply to command (receive UKS or send data packet).
-        Reserved       = 0x08,
-        Data           = 0x10  //!< Bit is set if SI sends data packet in this message.
-    };
-
     public class Command
     {
         public static UInt16 crc_seed = 0xFFFF;
