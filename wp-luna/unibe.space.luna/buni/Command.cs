@@ -104,9 +104,9 @@ namespace unibe.space.luna.buni
                 {
                     var bytes = fieldsToBytes();
 
-                    UInt16 crc = ccitt16.compute(bytes, CRC_SEED);
-
                     writer.Write(bytes);
+
+                    UInt16 crc = bytes.crc16(CRC_SEED);
 
                     // -1 for the programmer assuming little endian CPUs only
                     writer.Write((byte)(crc >> 8));
@@ -119,7 +119,7 @@ namespace unibe.space.luna.buni
 
         public UInt16 ComputeCrc()
         {
-            return ccitt16.compute(fieldsToBytes(), CRC_SEED);
+            return fieldsToBytes().crc16(CRC_SEED);
         }
 
         public static Command CreateStatusRequest()

@@ -94,9 +94,9 @@ namespace unibe.space.luna.uks
                 {
                     var bytes = fieldsToBytes();
 
-                    UInt16 crc = ccitt16.compute(bytes, CRC_SEED);
-
                     writer.Write(bytes);
+
+                    UInt16 crc = bytes.crc16(CRC_SEED);
 
                     // -1 for the programmer assuming little endian CPUs only
                     writer.Write((byte)(crc >> 8));

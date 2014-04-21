@@ -45,9 +45,9 @@ namespace unibe.space.luna.crc
 	        0x6E17, 0x7E36, 0x4E55, 0x5E74, 0x2E93, 0x3EB2, 0x0ED1, 0x1EF0
         };
 
-        const UInt16 default_seed_ = 0xFFFF;
+        public const UInt16 DEFAULT_SEED = 0xFFFF;
 
-        public static UInt16 compute(byte[] buffer, UInt16 seed = default_seed_)
+        public static UInt16 compute(byte[] buffer, UInt16 seed = DEFAULT_SEED)
         {
             UInt16 crc = seed;
 

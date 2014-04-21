@@ -42,6 +42,7 @@
     <Compile Include="buni\Acknowledge.cs" />
     <Compile Include="crc\ccitt16.cs" />
     <Compile Include="buni\Command.cs" />
+    <Compile Include="crc\Extensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="uks\Command.cs" />
   </ItemGroup>
