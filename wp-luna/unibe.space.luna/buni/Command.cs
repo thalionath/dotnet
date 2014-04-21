@@ -25,7 +25,7 @@ namespace unibe.space.luna.buni
 
     public class Command
     {
-        public static UInt16 crc_seed = 0xFFFF;
+        public static UInt16 CRC_SEED = 0xFFFF;
 
         public Marker Marker { get; set; }
 
@@ -104,7 +104,7 @@ namespace unibe.space.luna.buni
                 {
                     var bytes = fieldsToBytes();
 
-                    UInt16 crc = ccitt16.compute(bytes, crc_seed);
+                    UInt16 crc = ccitt16.compute(bytes, CRC_SEED);
 
                     writer.Write(bytes);
 
@@ -119,7 +119,7 @@ namespace unibe.space.luna.buni
 
         public UInt16 ComputeCrc()
         {
-            return ccitt16.compute(fieldsToBytes(), crc_seed);
+            return ccitt16.compute(fieldsToBytes(), CRC_SEED);
         }
 
         public static Command CreateStatusRequest()

@@ -6,7 +6,7 @@
     <ProjectGuid>{959F3B3E-9E75-4DF5-B904-DEC507287E8E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>unibe.space.luna.test</RootNamespace>
+    <RootNamespace>unibe.space.luna</RootNamespace>
     <AssemblyName>unibe.space.luna.test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -54,6 +54,7 @@
     <Compile Include="CommandTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestCCITT16.cs" />
+    <Compile Include="uks\CommandTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\unibe.space.luna\unibe.space.luna.csproj">
