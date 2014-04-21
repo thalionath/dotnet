@@ -57,28 +57,13 @@ namespace unibe.space.luna.uks
         {
             using (MemoryStream stream = new MemoryStream())
             {
-                // -1 for .net not allowing to specify endianess here
                 using (BinaryWriter writer = new BinaryWriter(stream))
                 {
                     writer.Write(Identifier);
                     writer.Write((byte)Format);
-
-                    // -1 for the programmer assuming little endian CPUs only
-                    writer.Write((byte)(CustomCommand >> 8));
-                    writer.Write((byte)(CustomCommand >> 0));
-                    writer.Write((byte)(SimpleCommand >> 8));
-                    writer.Write((byte)(SimpleCommand >> 0));
-
-                    byte[] arguments = BitConverter.GetBytes(CommandArguments);
-
-                    writer.Write(BitConverter.IsLittleEndian ? arguments.Reverse().ToArray() : arguments);
-
-                    /*
-                    writer.Write((byte)(CommandArguments >> 24));
-                    writer.Write((byte)(CommandArguments >> 16));
-                    writer.Write((byte)(CommandArguments >>  8));
-                    writer.Write((byte)(CommandArguments >>  0));
-                    */
+                    writer.Write(CustomCommand.ToBytes());
+                    writer.Write(SimpleCommand.ToBytes());
+                    writer.Write(CommandArguments.ToBytes());
                 }
 
                 return stream.ToArray();
@@ -89,18 +74,12 @@ namespace unibe.space.luna.uks
         {
             using (MemoryStream stream = new MemoryStream())
             {
-                // -1 for .net not allowing to specify endianess here
                 using (BinaryWriter writer = new BinaryWriter(stream))
                 {
                     var bytes = fieldsToBytes();
 
                     writer.Write(bytes);
-
-                    UInt16 crc = bytes.crc16(CRC_SEED);
-
-                    // -1 for the programmer assuming little endian CPUs only
-                    writer.Write((byte)(crc >> 8));
-                    writer.Write((byte)(crc >> 0));
+                    writer.Write(bytes.crc16(CRC_SEED).ToBytes());
                 }
 
                 return stream.ToArray();
