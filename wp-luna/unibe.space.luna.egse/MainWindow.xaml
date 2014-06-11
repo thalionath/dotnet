@@ -30,6 +30,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
@@ -45,5 +46,7 @@
         <TextBlock Grid.Column="3" Text="{Binding CanHavePayload, Mode=OneWay}" />
         <TextBlock Grid.Column="4" Text="CRC" />
         <TextBlock Grid.Column="5" Text="{Binding CRC, StringFormat={StaticResource CrcFormat}}" />
+        <Button Grid.Row="1" Grid.Column="0" Content="Open" Name="OpenPorts" Click="OpenPorts_Click"></Button>
+        <Button Grid.Row="1" Grid.Column="1" Content="Send" Name="SendStatusRequest" Click="SendStatusRequest_Click"></Button>
     </Grid>
 </Window>

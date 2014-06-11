@@ -8,6 +8,8 @@ namespace unibe.space.luna.crc
 {
     public class ccitt16
     {
+        private UInt16 value_;
+
         // how can I make this compile time constant?
         private static readonly UInt16[] table_ = new UInt16[]
         {
@@ -60,6 +62,43 @@ namespace unibe.space.luna.crc
             }
 
             return crc;
+        }
+
+        public static UInt16 compute( UInt16 seed, byte value )
+        {
+            return (UInt16)((seed << 8) ^ table_[(seed >> 8) ^ value]);
+        }
+
+        public ccitt16(UInt16 value = 0)
+        {
+            value_ = value;
+        }
+
+        public UInt16 addByte(byte value)
+        {
+            value_ = compute(value_, value);
+
+            return value_;
+        }
+
+        public string ToString()
+        {
+            return value_.ToString();
+        }
+
+        public string ToString(string format)
+        {
+            return value_.ToString(format);
+        }
+
+        public static implicit operator ccitt16(UInt16 value)
+        {
+            return new ccitt16(value);
+        }
+
+        public static implicit operator UInt16(ccitt16 crc)
+        {            
+            return crc.value_;
         }
     }
 }

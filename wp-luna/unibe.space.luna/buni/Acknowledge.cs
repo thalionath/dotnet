@@ -18,7 +18,9 @@ namespace unibe.space.luna.buni
 
     public class Acknowledge
     {
+        public const UInt16 CRC_SEED = 0xFFFF;
         public const int HEADER_SIZE = 4;
+        public const uint PAYLOAD_SIZE = 496;
 
         public Marker Marker  { get; set; }
         public Status Status  { get; set; }

@@ -40,6 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="buni\Acknowledge.cs" />
+    <Compile Include="buni\DownLink.cs" />
+    <Compile Include="buni\Parser.cs" />
+    <Compile Include="buni\UpLink.cs" />
     <Compile Include="crc\ccitt16.cs" />
     <Compile Include="buni\Command.cs" />
     <Compile Include="crc\Extensions.cs" />
